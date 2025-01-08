@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Dashboard">
 
-</ScrollView>
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Tambahkan konten di sini -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Konten Utama"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ViewPager2 untuk swipe antar tab -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- TabLayout di bagian bawah -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabGravity="fill">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produk" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabAboutMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Me" />
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>

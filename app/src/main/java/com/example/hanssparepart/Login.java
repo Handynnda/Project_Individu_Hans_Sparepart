@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login); // Ganti dengan nama file XML Anda
+        setContentView(R.layout.activity_login);
 
         // Inisialisasi FirebaseAuth
         mAuth = FirebaseAuth.getInstance();
@@ -52,14 +52,14 @@ public class Login extends AppCompatActivity {
             }
         });
 
-//        // Set listener untuk "Lupa Kata Sandi"
-//        lupaSandi.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Login.this, ForgotPasswordActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        // Set listener untuk "Lupa Kata Sandi"
+        lupaSandi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, Lupasandi.class);
+                startActivity(intent);
+            }
+        });
 
         // Set listener untuk "Register"
         daftar.setOnClickListener(new View.OnClickListener() {
