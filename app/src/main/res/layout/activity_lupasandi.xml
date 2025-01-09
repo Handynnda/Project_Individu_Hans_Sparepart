@@ -4,30 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/DefaultColor"
     tools:context=".Lupasandi">
 
-    <android.widget.EditText
-        android:id="@+id/emailInput"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:hint="Masukkan Email"
-        android:inputType="textEmailAddress"
-        android:importantForAccessibility="yes"
-        android:contentDescription="Input email untuk reset password"
+        android:layout_marginTop="90dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Reset password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <android.widget.EditText
+        android:id="@+id/emailInput"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/white"
+        android:textAlignment="center"
+        android:contentDescription="Input email untuk reset password"
+        android:hint="Masukkan Email"
+        android:importantForAccessibility="yes"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
     <android.widget.Button
         android:id="@+id/resetButton"
-        android:layout_width="0dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Reset Password"
         android:layout_marginTop="32dp"
-        android:importantForAccessibility="yes"
+        android:background="@drawable/tombol"
         android:contentDescription="Tombol untuk mengirim email reset password"
+        android:importantForAccessibility="yes"
+        android:text="Reset Password"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailInput" />
 

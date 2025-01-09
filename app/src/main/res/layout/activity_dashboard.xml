@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/DefaultColor"
     android:orientation="vertical"
     tools:context=".Dashboard">
 
@@ -20,22 +21,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Konten Utama"
-                android:gravity="center"
-                android:padding="16dp"
-                android:textSize="18sp" />
+                android:layout_height="match_parent"
+                android:background="@color/primaryColor"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Konten Utama"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </LinearLayout>
     </ScrollView>
 
     <!-- ViewPager2 untuk swipe antar tab -->
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <!-- TabLayout di bagian bawah -->
     <com.google.android.material.tabs.TabLayout
@@ -43,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabMode="fixed"
+        android:background="@color/white"
         app:tabGravity="fill">
 
         <com.google.android.material.tabs.TabItem

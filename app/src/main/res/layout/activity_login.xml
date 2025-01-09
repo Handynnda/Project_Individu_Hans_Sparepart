@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +13,6 @@
         android:layout_width="430dp"
         android:layout_height="930dp"
         android:background="@color/DefaultColor"
-        android:elevation="12sp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,7 +116,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginStart="230dp"
             android:text="Lupa kata sandi?"
-            android:textColor="#6B4EFF"
+            android:textColor="@color/textblue"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -182,7 +181,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="130dp"
+                android:layout_marginStart="135dp"
                 android:textStyle="bold"
                 android:text="Belum Punya Akun?" />
 
@@ -192,10 +191,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:textStyle="bold"
-                android:textColor="#6B4EFF"
+                android:textColor="@color/textblue"
                 android:text="Daftar" />
         </LinearLayout>
 
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
