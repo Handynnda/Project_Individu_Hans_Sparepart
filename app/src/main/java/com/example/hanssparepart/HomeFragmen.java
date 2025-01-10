@@ -14,6 +14,6 @@ public class HomeFragmen extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_home_fragmen, container, false); // Layout untuk Home
+        return inflater.inflate(R.layout.activity_home_fragmen, container, false);
     }
 }

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.HansSparepart"
         tools:targetApi="31">
         <activity
+            android:name=".Detail_Produk"
+            android:exported="false" />
+        <activity
             android:name=".AboutMeFragment"
             android:exported="false" />
         <activity

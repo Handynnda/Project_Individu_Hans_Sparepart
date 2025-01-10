@@ -9,33 +9,48 @@
     android:orientation="vertical"
     tools:context=".Dashboard">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/primaryColor"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imagelogout"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_log_out" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="58dp"
+            android:gravity="center"
+            android:text="Hans Sparepart"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imagepesan"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_pesan" />
+
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <!-- Tambahkan konten di sini -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/primaryColor"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="16dp"
-                    android:text="Konten Utama"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-            </LinearLayout>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
@@ -46,9 +61,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- ViewPager2 untuk swipe antar tab -->
-
-    <!-- TabLayout di bagian bawah -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
