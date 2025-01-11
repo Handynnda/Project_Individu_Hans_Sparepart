@@ -20,10 +20,13 @@
                 android:id="@+id/productLayout1"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:orientation="horizontal"
-                android:onClick="onProductClick1">
+                android:onClick="onProductClick1"
+                android:clickable="true"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -103,7 +106,9 @@
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:orientation="horizontal"
-                android:onClick="onProductClick2">
+                android:onClick="onProductClick2"
+                android:clickable="true"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -117,7 +122,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/hugger_1" />
+                        android:src="@drawable/olienduro1" />
 
                 </LinearLayout>
 
@@ -132,7 +137,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Hugger Airblade PNP Honda Vario"
+                        android:text="Oli Enduro Racing "
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -141,7 +146,7 @@
                         android:id="@+id/productRating2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.0 ★★★★☆ (2.890 Penilaian)  "
+                        android:text="4.0 ★★★★☆ (2.000 Penilaian)  "
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -149,7 +154,7 @@
                         android:id="@+id/productStock2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="200 Tersisa"
+                        android:text="150 Tersisa"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -168,7 +173,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Hugger Airblade Vario 125/150\nOriginal Vietnam\nPemasangan PNP\nFullset dengan Tabung"
+                        android:text="Oli Enduro racing 1L Original Dari Pertamina Cocok untuk motor sport karena volume olinya 1 Liter dan harga terjangkau"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -182,7 +187,9 @@
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:orientation="horizontal"
-                android:onClick="onProductClick3">
+                android:onClick="onProductClick3"
+                android:clickable="true"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -196,7 +203,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/hugger_1" />
+                        android:src="@drawable/mounting1" />
 
 
                 </LinearLayout>
@@ -212,7 +219,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Hugger Airblade PNP Honda Vario"
+                        android:text="Mounting ARM Honda Vario +6CM"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -221,7 +228,7 @@
                         android:id="@+id/productRating3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.0 ★★★★☆ (2.890 Penilaian)  "
+                        android:text="4.0 ★★★★☆ (1.000 Penilaian)  "
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -229,7 +236,7 @@
                         android:id="@+id/productStock3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="200 Tersisa"
+                        android:text="250 Tersisa"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -248,7 +255,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Hugger Airblade Vario 125/150\nOriginal Vietnam\nPemasangan PNP\nFullset dengan Tabung"
+                        android:text="Mounting Vario 125/150 \nMerk ARM panjang +6cm \nPemasangan PNP \nFullset dengan boshnya"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -262,7 +269,9 @@
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:orientation="horizontal"
-                android:onClick="onProductClick4">
+                android:onClick="onProductClick4"
+                android:clickable="true"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -276,7 +285,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/hugger_1" />
+                        android:src="@drawable/olishel1" />
 
 
                 </LinearLayout>
@@ -292,7 +301,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Hugger Airblade PNP Honda Vario"
+                        android:text="Oli shell Advance"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -301,7 +310,7 @@
                         android:id="@+id/productRating4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.0 ★★★★☆ (2.890 Penilaian)  "
+                        android:text="4.0 ★★★★☆ (3.000 Penilaian)"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -309,7 +318,7 @@
                         android:id="@+id/productStock4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="200 Tersisa"
+                        android:text="400 Tersisa"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -328,7 +337,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Hugger Airblade Vario 125/150\nOriginal Vietnam\nPemasangan PNP\nFullset dengan Tabung"
+                        android:text="Oli Mesin Merk Shell Advance Ax7 \nini cocok untuk motor yang sudah di upgade(borup) karena oli ini memiliki kandungan full syntetic yang bagus untuk mesin"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -342,7 +351,9 @@
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:orientation="horizontal"
-                android:onClick="onProductClick5">
+                android:onClick="onProductClick5"
+                android:clickable="true"
+                android:focusable="true">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -413,6 +424,89 @@
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/productLayout6"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:orientation="horizontal"
+                android:onClick="onProductClick5"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/productImage6"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hugger_1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/productName6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Hugger Airblade PNP Honda Vario"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/productRating6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.0 ★★★★☆ (2.890 Penilaian)  "
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/productStock6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200 Tersisa"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/descriptionTitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Deskripsi Produk"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDescription6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Hugger Airblade Vario 125/150\nOriginal Vietnam\nPemasangan PNP\nFullset dengan Tabung"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

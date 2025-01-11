@@ -43,6 +43,8 @@
         android:contentDescription="Tombol untuk mengirim email reset password"
         android:importantForAccessibility="yes"
         android:text="Reset Password"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"

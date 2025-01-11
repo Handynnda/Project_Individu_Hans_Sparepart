@@ -57,7 +57,7 @@
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/user" />
+                app:srcCompat="@drawable/ic_gmail" />
 
             <EditText
                 android:id="@+id/TextEmail"

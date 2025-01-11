@@ -32,13 +32,21 @@
             android:textColor="@color/black"
             android:text="Nama Lengkap"/>
 
-        <EditText
-            android:id="@+id/editTextFullName"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="Masukkan Nama Lengkap"
+            android:layout_height="match_parent"
             android:background="@color/white"
-            android:text=""/>
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextFullName"
+                android:layout_width="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:hint="Masukkan Nama Lengkap"
+                android:text="" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -47,14 +55,22 @@
             android:textColor="@color/black"
             android:text="Alamat Email"/>
 
-        <EditText
-            android:id="@+id/editTextEmail"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
             android:background="@color/white"
-            android:hint="Masukkan Alamat Email"
-            android:inputType="textEmailAddress"
-            android:text=""/>
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/white"
+                android:hint="Masukkan Alamat Email"
+                android:inputType="textEmailAddress"
+                android:text="" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -63,14 +79,22 @@
             android:textColor="@color/black"
             android:text="Kata Sandi"/>
 
-        <EditText
-            android:id="@+id/editTextPassword"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
             android:background="@color/white"
-            android:hint="Masukkan Kata Sandi"
-            android:inputType="textPassword"
-            android:text=""/>
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/white"
+                android:hint="Masukkan Kata Sandi"
+                android:inputType="textPassword"
+                android:text="" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -79,14 +103,22 @@
             android:textColor="@color/black"
             android:text="Konfirmasi Kata Sandi"/>
 
-        <EditText
-            android:id="@+id/editTextConfirmPassword"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
             android:background="@color/white"
-            android:hint="Masukkan Konfirmasi Kata Sandi"
-            android:inputType="textPassword"
-            android:text=""/>
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/white"
+                android:hint="Masukkan Konfirmasi Kata Sandi"
+                android:inputType="textPassword"
+                android:text="" />
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/daftar"
