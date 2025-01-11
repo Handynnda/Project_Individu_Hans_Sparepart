@@ -27,6 +27,7 @@ public class ProdukFragment extends Fragment {
                 detailIntent.putExtra("productName", "Hugger Airblade PNP Honda Vario");
                 detailIntent.putExtra("productRating", "4.0 ★★★★☆ (2.890 Penilaian)");
                 detailIntent.putExtra("productStock", "200 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 250.000");
                 detailIntent.putExtra("productDescription", "Hugger Airblade Vario 125/150\nOriginal Vietnam\nFullset dengan Tabung");
                 detailIntent.putExtra("productImage", R.drawable.hugger_1);
                 detailIntent.putExtra("galleryImage1", R.drawable.hugger_1);
@@ -44,6 +45,7 @@ public class ProdukFragment extends Fragment {
                 detailIntent.putExtra("productName", "Oli Enduro Racing  1L");
                 detailIntent.putExtra("productRating", "4.0 ★★★★☆ (2.000 Penilaian)");
                 detailIntent.putExtra("productStock", "150 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 50.000");
                 detailIntent.putExtra("productDescription", "Oli Enduro racing 1L\nOriginal Dari Pertamina\nCocok untuk motor sport");
                 detailIntent.putExtra("productImage", R.drawable.olienduro1);
                 detailIntent.putExtra("galleryImage1", R.drawable.olienduro1);
@@ -62,6 +64,7 @@ public class ProdukFragment extends Fragment {
                 detailIntent.putExtra("productName", "Mounting ARM Honda Vario +6CM");
                 detailIntent.putExtra("productRating", "4.0 ★★★★☆ (1.000 Penilaian)");
                 detailIntent.putExtra("productStock", "250 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 320.000");
                 detailIntent.putExtra("productDescription", "Mounting Vario 125/150 Merk ARM panjang +6cm\nPemasangan PNP\nFullset dengan boshnya");
                 detailIntent.putExtra("productImage", R.drawable.mounting1);
                 detailIntent.putExtra("galleryImage1", R.drawable.mounting1);
@@ -80,11 +83,50 @@ public class ProdukFragment extends Fragment {
                 detailIntent.putExtra("productName", "Oli Shell Advance");
                 detailIntent.putExtra("productRating", "4.0 ★★★★☆ (3.000 Penilaian)");
                 detailIntent.putExtra("productStock", "400 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 62.000");
                 detailIntent.putExtra("productDescription", "Oli Mesin Merk Shell Advance Ax7 ini cocok untuk motor yang sudah di upgade(borup) karena oli ini memiliki kandungan full syntetic yang bagus untuk mesin");
                 detailIntent.putExtra("productImage", R.drawable.olishel1);
                 detailIntent.putExtra("galleryImage1", R.drawable.olishel1);
                 detailIntent.putExtra("galleryImage2", R.drawable.olishel2);
                 detailIntent.putExtra("galleryImage3", R.drawable.olishel3);
+                startActivity(detailIntent);
+            }
+        });
+
+        // Tambahkan listener untuk produk 5
+        LinearLayout productLayout5 = view.findViewById(R.id.productLayout5);
+        productLayout5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailIntent = new Intent(getActivity(), Detail_Produk.class);
+                detailIntent.putExtra("productName", "Kaliper ARM Full CNC");
+                detailIntent.putExtra("productRating", "4.0 ★★★★☆ (890 Penilaian)");
+                detailIntent.putExtra("productStock", "300 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 600.000");
+                detailIntent.putExtra("productDescription", "Kaliper ARM Universal Full CNC \nMaterial Billet Aluminium Alloy \nPewarnaan Proses Anodizing \nProses Full CNC (100% detail dan presisi) \nSudah Termasuk Bracket Kaliper");
+                detailIntent.putExtra("productImage", R.drawable.kaliper1);
+                detailIntent.putExtra("galleryImage1", R.drawable.kaliper1);
+                detailIntent.putExtra("galleryImage2", R.drawable.kaliper2);
+                detailIntent.putExtra("galleryImage3", R.drawable.kaliper3);
+                startActivity(detailIntent);
+            }
+        });
+
+        // Tambahkan listener untuk produk 6
+        LinearLayout productLayout6 = view.findViewById(R.id.productLayout6);
+        productLayout6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailIntent = new Intent(getActivity(), Detail_Produk.class);
+                detailIntent.putExtra("productName", "Oli Samping Motul");
+                detailIntent.putExtra("productRating", "4.0 ★★★★☆ (2.890 Penilaian)");
+                detailIntent.putExtra("productStock", "300 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 120.000");
+                detailIntent.putExtra("productDescription", "Motul 510 merupakan oli samping berkualitas dari Motul. Oli samping ini terbuat dari formula khusus Technosynthese untuk memberikan perlindungan optimal terhadap mesin, formula anti asap dan dapat digunakan untuk semua motor dengan jenis 2 tak. ");
+                detailIntent.putExtra("productImage", R.drawable.olimotul1);
+                detailIntent.putExtra("galleryImage1", R.drawable.olimotul1);
+                detailIntent.putExtra("galleryImage2", R.drawable.olimotul2);
+                detailIntent.putExtra("galleryImage3", R.drawable.olimotul3);
                 startActivity(detailIntent);
             }
         });

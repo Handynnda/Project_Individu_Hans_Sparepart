@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pembayaran">
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6200EE"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Kembali"
+                android:src="@drawable/iconback" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Hans Sparepart"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Nama Produk -->
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Produk"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Harga Produk -->
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga Produk"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Nama Pembeli -->
+        <EditText
+            android:id="@+id/etBuyerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Pembeli"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Alamat Pembeli -->
+        <EditText
+            android:id="@+id/etBuyerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat Pembeli"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Metode Pembayaran -->
+        <EditText
+            android:id="@+id/etPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Metode Pembayaran"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvJumlahBeli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Pembelian: 0"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Total Harga -->
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Harga: Rp. 0"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tombol Konfirmasi -->
+        <Button
+            android:id="@+id/btnConfirmPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi Pembayaran" />
+    </LinearLayout>
+</ScrollView>

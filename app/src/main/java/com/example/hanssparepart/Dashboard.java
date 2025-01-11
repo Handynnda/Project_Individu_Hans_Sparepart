@@ -67,7 +67,7 @@ public class Dashboard extends AppCompatActivity {
                         tab.setText("Produk");
                         break;
                     case 2:
-                        tab.setText("About Me");
+                        tab.setText("Profil");
                         break;
                 }
             }

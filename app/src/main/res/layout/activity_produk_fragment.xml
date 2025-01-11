@@ -42,6 +42,16 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/hugger_1" />
 
+                    <TextView
+                        android:id="@+id/productHarga1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Rp. 250.000"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -124,6 +134,18 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/olienduro1" />
 
+                    <TextView
+                        android:id="@+id/productHarga2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Rp. 50.000"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -173,7 +195,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Oli Enduro racing 1L Original Dari Pertamina Cocok untuk motor sport karena volume olinya 1 Liter dan harga terjangkau"
+                        android:text="Oli Enduro racing 1L Original Dari Pertamina Cocok untuk motor bebek"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -205,6 +227,16 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/mounting1" />
 
+                    <TextView
+                        android:id="@+id/productHarga3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Rp. 320.000"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -287,6 +319,17 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/olishel1" />
 
+                    <TextView
+                        android:id="@+id/productHarga4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Rp. 62.000"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
 
                 </LinearLayout>
 
@@ -337,7 +380,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Oli Mesin Merk Shell Advance Ax7 \nini cocok untuk motor yang sudah di upgade(borup) karena oli ini memiliki kandungan full syntetic yang bagus untuk mesin"
+                        android:text="Oli Mesin Merk Shell Advance Ax7 \nini cocok untuk motor yang sudah di upgade(borup)"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -367,7 +410,17 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/hugger_1" />
+                        android:src="@drawable/kaliper1" />
+                    <TextView
+                        android:id="@+id/productHarga5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Rp. 600.000"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -383,7 +436,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Hugger Airblade PNP Honda Vario"
+                        android:text="Kaliper ARM Full CNC"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -392,7 +445,7 @@
                         android:id="@+id/productRating5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4.0 ★★★★☆ (2.890 Penilaian)  "
+                        android:text="4.0 ★★★★☆ (890 Penilaian)  "
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -400,7 +453,7 @@
                         android:id="@+id/productStock5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="200 Tersisa"
+                        android:text="300 Tersisa"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -419,7 +472,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Hugger Airblade Vario 125/150\nOriginal Vietnam\nPemasangan PNP\nFullset dengan Tabung"
+                        android:text="Kaliper ARM Universal Full CNC \nMaterial Billet Aluminium Alloy \nPewarnaan Proses Anodizing"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -449,8 +502,18 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/hugger_1" />
+                        android:src="@drawable/olimotul1" />
 
+                    <TextView
+                        android:id="@+id/productHarga6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Rp. 120.000"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -465,7 +528,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Hugger Airblade PNP Honda Vario"
+                        android:text="Oli Samping Motul"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -482,7 +545,7 @@
                         android:id="@+id/productStock6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="200 Tersisa"
+                        android:text="300 Tersisa"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -501,7 +564,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Hugger Airblade Vario 125/150\nOriginal Vietnam\nPemasangan PNP\nFullset dengan Tabung"
+                        android:text="Motul 510 merupakan oli samping berkualitas dari Motul"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>

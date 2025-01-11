@@ -51,12 +51,28 @@
             android:orientation="horizontal"
             android:padding="8dp">
 
-            <ImageView
-                android:id="@+id/productImage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:contentDescription="Produk"
-                android:src="@drawable/hugger_1" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:contentDescription="Produk"
+                    android:src="@drawable/hugger_1" />
+
+                <TextView
+                    android:id="@+id/productHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 250.000"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -89,9 +105,26 @@
                     android:textColor="#FF0000"
                     android:textSize="14sp" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/beliproduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:inputType="number"
+                        android:hint="masukan jumlah beli"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
                 <Button
                     android:id="@+id/btnBuy"
                     android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="Beli Sekarang"
@@ -136,7 +169,7 @@
 
         <LinearLayout
             android:layout_width="350dp"
-            android:layout_height="100dp"
+            android:layout_height="180dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:background="@drawable/rounded_corner"

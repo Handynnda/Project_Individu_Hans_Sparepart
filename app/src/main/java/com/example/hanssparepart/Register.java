@@ -8,12 +8,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
 
 public class Register extends AppCompatActivity {
 
@@ -22,6 +28,7 @@ public class Register extends AppCompatActivity {
     private AppCompatButton buttonRegister;
     private TextView tombolMasuk;
     private FirebaseAuth mAuth; // Firebase Authentication
+    private DatabaseReference databaseReference; // Firebase Realtime Database
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +38,7 @@ public class Register extends AppCompatActivity {
         // Inisialisasi Firebase Authentication
         mAuth = FirebaseAuth.getInstance();
 
-        // Inisialisasi komponen
+        // Inisialisasi komponen UI
         editTextFullName = findViewById(R.id.editTextFullName);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -75,18 +82,41 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                // Proses registrasi dengan Firebase
+                // Proses registrasi dengan Firebase Authentication
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
                                 // Registrasi berhasil
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 if (user != null) {
-                                    Toast.makeText(Register.this, "Registrasi berhasil!", Toast.LENGTH_SHORT).show();
-                                    // Pindah ke halaman login
-                                    Intent intent = new Intent(Register.this, Login.class);
-                                    startActivity(intent);
-                                    finish(); // Mengakhiri aktivitas registrasi
+                                    String userId = user.getUid(); // Dapatkan UID pengguna dari FirebaseAuth
+
+                                    // Dapatkan tanggal saat ini dalam format DD/MM/YYYY
+                                    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                                    String registrationDate = dateFormat.format(new Date());
+
+                                    // Simpan data ke Firebase Realtime Database
+                                    databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
+
+                                    // Buat HashMap untuk menyimpan data pengguna
+                                    HashMap<String, String> userMap = new HashMap<>();
+                                    userMap.put("fullName", fullName);
+                                    userMap.put("email", email);
+                                    userMap.put("registrationDate", registrationDate); // Gunakan format tanggal DD/MM/YYYY
+
+                                    // Simpan data ke Firebase
+                                    databaseReference.setValue(userMap)
+                                            .addOnCompleteListener(dbTask -> {
+                                                if (dbTask.isSuccessful()) {
+                                                    Toast.makeText(Register.this, "Registrasi berhasil!", Toast.LENGTH_SHORT).show();
+                                                    // Pindah ke halaman login
+                                                    Intent intent = new Intent(Register.this, Login.class);
+                                                    startActivity(intent);
+                                                    finish();
+                                                } else {
+                                                    Toast.makeText(Register.this, "Gagal menyimpan data pengguna.", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
                                 }
                             } else {
                                 // Registrasi gagal
