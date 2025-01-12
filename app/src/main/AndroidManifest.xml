@@ -15,6 +15,9 @@
         android:theme="@style/Theme.HansSparepart"
         tools:targetApi="31">
         <activity
+            android:name=".KonfirmasiPembayaran"
+            android:exported="false" />
+        <activity
             android:name=".Pembayaran"
             android:exported="false" />
         <activity

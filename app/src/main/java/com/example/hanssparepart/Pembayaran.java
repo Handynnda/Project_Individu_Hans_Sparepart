@@ -1,7 +1,9 @@
 package com.example.hanssparepart;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +13,7 @@ public class Pembayaran extends AppCompatActivity {
     private TextView tvProductName, tvProductPrice, tvJumlahBeli, tvTotalPrice;
     private TextView etBuyerName, etBuyerAddress, etPaymentMethod;
     private Button btnConfirmPayment;
+    private ImageView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,7 @@ public class Pembayaran extends AppCompatActivity {
         etBuyerAddress = findViewById(R.id.etBuyerAddress);
         etPaymentMethod = findViewById(R.id.etPaymentMethod);
         btnConfirmPayment = findViewById(R.id.btnConfirmPayment);
+        btnBack = findViewById(R.id.btnBack);
 
         // Ambil Data dari Intent
         String productName = getIntent().getStringExtra("productName");
@@ -62,12 +66,17 @@ public class Pembayaran extends AppCompatActivity {
                 return;
             }
 
-            // Simulasi konfirmasi pembayaran
-            Toast.makeText(Pembayaran.this,
-                    "Pembayaran berhasil!\nTerima kasih, " + buyerName,
-                    Toast.LENGTH_LONG).show();
+            // Pindah ke Form Konfirmasi Pembayaran
+            Intent intent = new Intent(Pembayaran.this, KonfirmasiPembayaran.class);
+            intent.putExtra("buyerName", buyerName);
+            intent.putExtra("buyerAddress", buyerAddress);
+            intent.putExtra("paymentMethod", paymentMethod);
+            intent.putExtra("totalPrice", tvTotalPrice.getText().toString());
+            startActivity(intent);
+        });
 
-            // Tutup halaman setelah konfirmasi
+        // Tombol Back
+        btnBack.setOnClickListener(v -> {
             finish();
         });
     }

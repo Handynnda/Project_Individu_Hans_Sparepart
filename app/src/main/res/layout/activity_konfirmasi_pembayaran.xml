@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DefaultColor"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Konfirmasi Pembayaran" />
+
+        <TextView
+            android:id="@+id/tvBuyerName"
+            android:layout_marginTop="120dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Nama Pembeli"
+            android:textSize="18sp"
+            android:layout_marginBottom="28dp" />
+
+        <TextView
+            android:id="@+id/tvBuyerAddress"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textSize="16sp"
+            android:layout_marginBottom="28dp" />
+
+        <TextView
+            android:id="@+id/tvPaymentMethod"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Metode Pembayaran"
+            android:textSize="16sp"
+            android:layout_marginBottom="28dp" />
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Total Harga"
+            android:textSize="16sp"
+            android:layout_marginBottom="26dp" />
+
+        <Button
+            android:id="@+id/btnBackToHome"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Kembali ke Home" />
+
+    </LinearLayout>
+</LinearLayout>

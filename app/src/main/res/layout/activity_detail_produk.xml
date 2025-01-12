@@ -63,15 +63,6 @@
                     android:contentDescription="Produk"
                     android:src="@drawable/hugger_1" />
 
-                <TextView
-                    android:id="@+id/productHarga"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rp. 250.000"
-                    android:layout_marginStart="30dp"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:layout_marginTop="14dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -108,14 +99,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/productHarga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 250.000"
+                        android:layout_marginStart="30dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
 
                     <EditText
                         android:id="@+id/beliproduk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
                         android:inputType="number"
                         android:hint="masukan jumlah beli"
                         android:textSize="14sp" />
@@ -126,7 +126,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="20dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="38dp"
                     android:text="Beli Sekarang"
                     android:background="@drawable/tombol"
                     android:textColor="@color/white" />
