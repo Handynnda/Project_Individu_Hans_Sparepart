@@ -2,8 +2,10 @@ package com.example.hanssparepart;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Pembayaran extends AppCompatActivity {
 
     private TextView tvProductName, tvProductPrice, tvJumlahBeli, tvTotalPrice;
-    private TextView etBuyerName, etBuyerAddress, etPaymentMethod;
+    private TextView etBuyerName, etBuyerAddress;
+    private Spinner spinnerPaymentMethod;
     private Button btnConfirmPayment;
     private ImageView btnBack;
 
@@ -27,7 +30,7 @@ public class Pembayaran extends AppCompatActivity {
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
         etBuyerName = findViewById(R.id.etBuyerName);
         etBuyerAddress = findViewById(R.id.etBuyerAddress);
-        etPaymentMethod = findViewById(R.id.etPaymentMethod);
+        spinnerPaymentMethod = findViewById(R.id.spinnerPaymentMethod);
         btnConfirmPayment = findViewById(R.id.btnConfirmPayment);
         btnBack = findViewById(R.id.btnBack);
 
@@ -46,11 +49,18 @@ public class Pembayaran extends AppCompatActivity {
         tvJumlahBeli.setText("Jumlah Pembelian: " + jumlahBeli);
         tvTotalPrice.setText("Total Harga: Rp. " + totalHarga);
 
+        // Atur Spinner untuk Metode Pembayaran
+        String[] paymentMethods = {"Transfer Bank", "COD"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_spinner_item, paymentMethods);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerPaymentMethod.setAdapter(adapter);
+
         // Tombol Konfirmasi Pembayaran
         btnConfirmPayment.setOnClickListener(v -> {
             String buyerName = etBuyerName.getText().toString().trim();
             String buyerAddress = etBuyerAddress.getText().toString().trim();
-            String paymentMethod = etPaymentMethod.getText().toString().trim();
+            String paymentMethod = spinnerPaymentMethod.getSelectedItem().toString();
 
             // Validasi input
             if (buyerName.isEmpty()) {
@@ -59,10 +69,6 @@ public class Pembayaran extends AppCompatActivity {
             }
             if (buyerAddress.isEmpty()) {
                 etBuyerAddress.setError("Alamat harus diisi!");
-                return;
-            }
-            if (paymentMethod.isEmpty()) {
-                etPaymentMethod.setError("Metode pembayaran harus diisi!");
                 return;
             }
 

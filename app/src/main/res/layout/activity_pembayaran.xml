@@ -2,16 +2,20 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/DefaultColor"
     android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner"
         android:orientation="vertical">
+
+        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#6200EE"
+            android:background="@drawable/header1"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -38,69 +42,92 @@
         <!-- Nama Produk -->
         <TextView
             android:id="@+id/tvProductName"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="8dp"
             android:text="Nama Produk"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:textStyle="bold" />
 
         <!-- Harga Produk -->
         <TextView
             android:id="@+id/tvProductPrice"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
             android:text="Harga Produk"
-            android:textSize="16sp"
-            android:layout_marginBottom="8dp" />
+            android:textSize="16sp" />
 
         <!-- Nama Pembeli -->
         <EditText
             android:id="@+id/etBuyerName"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:hint="Nama Pembeli"
-            android:layout_marginBottom="16dp" />
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Nama Pembeli" />
 
         <!-- Alamat Pembeli -->
         <EditText
             android:id="@+id/etBuyerAddress"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:hint="Alamat Pembeli"
-            android:layout_marginBottom="16dp" />
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:hint="Alamat Pembeli" />
 
         <!-- Metode Pembayaran -->
-        <EditText
-            android:id="@+id/etPaymentMethod"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Metode Pembayaran"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="8dp"
+            android:text="Metode Pembayaran"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
+        <Spinner
+            android:id="@+id/spinnerPaymentMethod"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:popupTheme="@style/SpinnerDropdownStyle"
+            android:spinnerMode="dropdown" />
+
+        <!-- Jumlah Pembelian -->
         <TextView
             android:id="@+id/tvJumlahBeli"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
             android:text="Jumlah Pembelian: 0"
-            android:textSize="20sp"
-            android:layout_marginBottom="16dp" />
-
+            android:textSize="20sp" />
 
         <!-- Total Harga -->
         <TextView
             android:id="@+id/tvTotalPrice"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
             android:text="Total Harga: Rp. 0"
-            android:textSize="16sp"
-            android:layout_marginBottom="16dp" />
+            android:textSize="16sp" />
 
         <!-- Tombol Konfirmasi -->
         <Button
             android:id="@+id/btnConfirmPayment"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="150dp"
             android:text="Konfirmasi Pembayaran" />
     </LinearLayout>
 </ScrollView>

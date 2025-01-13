@@ -131,6 +131,44 @@ public class ProdukFragment extends Fragment {
             }
         });
 
+        // Tambahkan listener untuk produk 7
+        LinearLayout productLayout7 = view.findViewById(R.id.productLayout7);
+        productLayout7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailIntent = new Intent(getActivity(), Detail_Produk.class);
+                detailIntent.putExtra("productName", "piston Lhk Pin 14");
+                detailIntent.putExtra("productRating", "4.0 ★★★★☆ (890 Penilaian)");
+                detailIntent.putExtra("productStock", "350 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 450.000");
+                detailIntent.putExtra("productDescription", "piston merek LHK 100% original thailand\n harga 1set ada 4 item\n - piston\n - pin piston\n - ring piston\n - kancing pin");
+                detailIntent.putExtra("productImage", R.drawable.pistonlhk1);
+                detailIntent.putExtra("galleryImage1", R.drawable.pistonlhk1);
+                detailIntent.putExtra("galleryImage2", R.drawable.pistonlhk2);
+                detailIntent.putExtra("galleryImage3", R.drawable.pistonlhk3);
+                startActivity(detailIntent);
+            }
+        });
+
+        // Tambahkan listener untuk produk8
+        LinearLayout productLayout8 = view.findViewById(R.id.productLayout8);
+        productLayout8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailIntent = new Intent(getActivity(), Detail_Produk.class);
+                detailIntent.putExtra("productName", "Noken As Xtr Racing");
+                detailIntent.putExtra("productRating", "4.0 ★★★★☆ (800 Penilaian)");
+                detailIntent.putExtra("productStock", "300 Tersisa");
+                detailIntent.putExtra("productHarga", "Rp. 220.000");
+                detailIntent.putExtra("productDescription", "Noken As Racing untuk Jupiter Mx, MX King, Vixion\nTersedia Ukuran 5.8, 6.5, dan 70");
+                detailIntent.putExtra("productImage", R.drawable.nokenasbrt1);
+                detailIntent.putExtra("galleryImage1", R.drawable.nokenasbrt1);
+                detailIntent.putExtra("galleryImage2", R.drawable.nokenasbrt2);
+                detailIntent.putExtra("galleryImage3", R.drawable.nokenasbrt3);
+                startActivity(detailIntent);
+            }
+        });
+
         return view;
     }
 }

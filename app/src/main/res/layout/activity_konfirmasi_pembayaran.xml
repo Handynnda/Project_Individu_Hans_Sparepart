@@ -66,5 +66,15 @@
             android:layout_height="wrap_content"
             android:text="Kembali ke Home" />
 
+        <!-- Kode QR -->
+        <ImageView
+            android:id="@+id/ivQrCode"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:contentDescription="Kode QR"
+            android:src="@drawable/qr_code_handy" />
     </LinearLayout>
 </LinearLayout>

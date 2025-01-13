@@ -3,6 +3,7 @@ package com.example.hanssparepart;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +11,7 @@ public class KonfirmasiPembayaran extends AppCompatActivity {
 
     private TextView tvBuyerName, tvBuyerAddress, tvPaymentMethod, tvTotalPrice;
     private Button btnBackToHome;
+    private ImageView ivQrCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class KonfirmasiPembayaran extends AppCompatActivity {
         tvPaymentMethod = findViewById(R.id.tvPaymentMethod);
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
         btnBackToHome = findViewById(R.id.btnBackToHome);
+        ivQrCode = findViewById(R.id.ivQrCode);
 
         // Ambil Data dari Intent
         String buyerName = getIntent().getStringExtra("buyerName");
@@ -33,7 +36,14 @@ public class KonfirmasiPembayaran extends AppCompatActivity {
         tvBuyerName.setText("Nama Pembeli: " + buyerName);
         tvBuyerAddress.setText("Alamat: " + buyerAddress);
         tvPaymentMethod.setText("Metode Pembayaran: " + paymentMethod);
-        tvTotalPrice.setText("Total Harga: " + totalPrice);
+        tvTotalPrice.setText(" " + totalPrice);
+
+        // Periksa Metode Pembayaran dan Tampilkan Kode QR
+        if ("Transfer Bank".equals(paymentMethod)) {
+            ivQrCode.setVisibility(ImageView.VISIBLE); // Tampilkan kode QR jika Transfer Bank
+        } else {
+            ivQrCode.setVisibility(ImageView.GONE); // Sembunyikan kode QR untuk metode lain
+        }
 
         // Tombol Kembali ke Home
         btnBackToHome.setOnClickListener(v -> {
